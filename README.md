@@ -1,73 +1,61 @@
-# React Template
-[![Netlify Status](https://api.netlify.com/api/v1/badges/339c4ae9-fc7f-41b4-9b49-2dab0a20eaba/deploy-status)](https://app.netlify.com/sites/react-template-21/deploys)
+ ## Bio Site
 
-[See Live Demo of this Template](https://react-template-21.netlify.app/)
+### Your completed personal site will be reviewed by your instructor before you start your capstone.
 
-This template includes all the dependencies and set up needed for you to work within defined code standards and structure to get you up and running quickly.
+## Requirements
+- You should go through AT LEAST 4 projects (individual or group) and deployed them.
+- Each project should have a clickable link that goes to more details that includes a link to the Github Repo and Deployed App.
+- You should have real data everywhere throughout your personal site. No lorem.
+- Your site should allow some form of authentication so that you can make changes.
+- Your site should have CRUD on at least one (1) content type:
+- About, Contact, Technologies, or Projects.
 
-## Topics
-- [Get Started](#get-started)
-- [Starting the Project](#starting-the-project)
-- [Other important tidbits](#other-important-tidbits)
-    - [React Dev Tools](#react-dev-tools)
-    - [Using axios](#using-axios)
-    - [Deploying on Netlify](#deploying-on-netlify)
-___
+### README is completed with:
+- Name of the Project
+- Overview of the project
+- Link to your wireframes/prototype
+- Link to the deployed project
+- Link to your project board (yes...even though it is a part of the repo)
+- Description of the user
+- List of features
+- Screenshots of your project
+- List of contributors and links to their GH profiles
+- Link to Loom video walkthrough of your app (no more than 1 minute long! Make it great)
 
-## Get Started
-### Use Template
-#### 1. To get started, click the GREEN "Use this Template" button at the top of the repo
-![Use this Template](./documentation/usetemplate.png)
+### Stretch
+- CRUD on multiple content types on the site (Trust me, you will be thankful that you did!)
 
-#### 2. Make sure YOUR github account is selected in the dropdown and name your project
-![Create Project](./documentation/createproject.png)
+## Pages for Personal Bio Site
+### About
+- Is it easy to find the personal bio?
+- Bonus points for having your own custom domain and redirecting to your deployed site
+- Does the personal bio tell the story:
+- Why do they want to go into development
+- What they love about development
+- What makes them a good developer
+- General look and usability
 
-3. Clone your new repo to your local machine
-4. Go to the **NEXT** section
+### Contact
+- Is it easy to find the contact information
+- Do all of the links work
+- General look and usability
 
-## Starting the Project
-1. Open the `package.json` file and change the `name` property to the name of your application, and `author` to  your name
-1. Open the `/public/index.html` file and change the `title` attribute to the name of your application
-1. Rename the `.env.local.sample` file to `.env.local` file. The final file name should be `.env.local`
-1. From your command line, be in the root directory and run `npm install` OR `npm i` for short
-1. From your command line, be in the root directory and run `npx husky install`
-1. To start your application, run `npm start`
+### Technologies
+- Is it easy to find where the technologies are
+- Do all the technologies have real content/not fake data
+- Do you actually have experience with the technology (can you explain what it does and why you used it)
+- General look and usability
 
-### If you see this, you are set to go!
-![LIT](./documentation/lit-screen.png)
+### Projects
+- Is it easy to find where the projects are
+- Do all the projects have real content/not fake data
+- Do all of the links work
+- Do all of the deployed projects work correctly
 
-**NOTES:** 
-- Changes you make to the project will make the browser reload on save...no more hard refresh unless something goes wrong.
-
-## Other Important Tidbits
-### React Dev Tools
-From this time forward, you will be expected to have a clean console in order for your assignments to be approved. Use [React Developer Tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) to help with debugging.
-### Including Images with React
-If you have a folder of local images that you want to load into your code things get a little strange with webpack.  Remember the only way webpack knows about assets is if they are imported into your javascript files.  Even our CSS is not added until those files are imported into our javascript files.  Below is some sample code for how to load a local image file into your project
-
-```js
-import cat from './assets/cat.jpg';
-
-<>
-  <img src=${cat} alt="picture of a cat"/>
-</>
-
-```
-### Using Axios
-> For every file you will need to make an API request in, you will need to import Axios
-```js
-import axios from 'axios';
-
-const examplePromise = () => {
-  axios.get('http://localhost:3001/example')
-    .then((data) => {
-      console.warn(data);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-});
-```
+## General look and usability
+- General look and feel of the whole site
+- Is it visually appealing
+- Is it cohesive 
 
 ### Deploying on Netlify
 
