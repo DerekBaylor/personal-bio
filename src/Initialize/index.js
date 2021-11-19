@@ -1,37 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Routes from '../routes';
 
 function Initialize() {
-  const [domWriting, setDomWriting] = useState('Nothing Here!');
-
-  const handleClick = (e) => {
-    console.warn(`You clicked ${e.target.id}`);
-    setDomWriting(`You clicked ${e.target.id}! Check the Console!`);
-  };
-
   return (
-    <div className="App">
-      <h2>INSIDE APP COMPONENT</h2>
-      <div>
-        <button
-          type="button"
-          id="this-button"
-          className="btn btn-info"
-          onClick={handleClick}
-        >
-          I am THIS button
-        </button>
-      </div>
-      <div>
-        <button
-          type="button"
-          id="that-button"
-          className="btn btn-primary mt-3"
-          onClick={handleClick}
-        >
-          I am THAT button
-        </button>
-      </div>
-      <h3>{domWriting}</h3>
+    <div>
+      <Navigation />
+      <Routes />
     </div>
   );
 }
