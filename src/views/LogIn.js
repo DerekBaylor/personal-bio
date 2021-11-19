@@ -1,7 +1,7 @@
 import React from 'react';
 import { signInUser } from '../api/auth';
 
-export default function SignIn() {
+export default function LogIn() {
   return (
     <div className="text-center mt-5">
       <h1>Welcome! Sign In!</h1>
