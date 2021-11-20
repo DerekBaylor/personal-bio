@@ -1,4 +1,5 @@
 import React from 'react';
+import BottomNavigation from '../components/BottomNavigation';
 import Navigation from '../components/Navigation';
 import Routes from '../routes';
 
@@ -7,6 +8,7 @@ function Initialize() {
     <div>
       <Navigation />
       <Routes />
+      <BottomNavigation />
     </div>
   );
 }
