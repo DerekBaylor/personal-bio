@@ -1,27 +1,27 @@
-// import React, { useEffect, useState } from 'react';
 import React from 'react';
-// import { Card } from 'reactstrap';
-// import getProjects from '../../sample-data/projectData';
+import PropTypes from 'prop-types';
 
-export default function ProjectCards() {
-  // const [cards, setCards] = useState([]);
-
-  // useEffect(() => {
-  //   getProjects().then(setCards);
-  // }, []);
-
+export default function ProjectCards({ card }) {
   return (
     <div>
       <div className="card project-card">
-        <img src="..." className="card-img-top" alt="..." />
+        <img
+          src={card.projectImage}
+          className="card-img-top"
+          alt="Logo of Project"
+        />
         <div className="card-body">
-          {/* <h5 className="card-title">{projectCards.projectName}</h5> */}
-          {/* <p className="card-text">{card.projectDescription}</p> */}
+          <h5 className="card-title">{card.projectName}</h5>
+          <p className="card-text">{card.projectDescription}</p>
           <a href="/" className="btn btn-primary">
-            Go somewhere
+            Go Home
           </a>
         </div>
       </div>
     </div>
   );
 }
+
+ProjectCards.propTypes = {
+  card: PropTypes.shape(PropTypes.obj).isRequired,
+};
