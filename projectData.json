@@ -1,0 +1,12 @@
+{
+    "p1": {
+        "projectName": "React Horder",
+        "projectImage": "https://zfjepfckphrvbatmvyud.supabase.in/storage/v1/object/public/personal-bio-storage/reactHorderLogo.png",
+        "projectDescription": "This is a web app where users can record and display their collections.",
+        "teamProject": "true",
+        "gitHubLink": "https://github.com/nss-evening-cohort-16/react-horder-ookie-spooky-devs",
+        "projectLink": "https://github.com/nss-evening-cohort-16/react-horder-ookie-spooky-devs/projects/1",
+        "deployedLink": "https://ookie-spooky-horder.netlify.app/",
+        "projectId": "proj-1-reactHorder"
+    }
+}
