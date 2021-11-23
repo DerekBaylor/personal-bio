@@ -36,6 +36,15 @@ export default function Navigation() {
                 Contact Me
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to="/projectForm"
+              >
+                Project Form
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

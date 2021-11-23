@@ -1,32 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import firebase from 'firebase';
-import 'firebase/auth';
 import BottomNavigation from '../components/BottomNavigation';
 import Navigation from '../components/Navigation';
 import Routes from '../routes';
+import firebaseConfig from '../api/apiKeys';
 
 function Initialize() {
   const [user, setUser] = useState(null);
+  const [admin, setAdmin] = useState(null);
 
   useEffect(() => {
-    firebase.auth().onAuthStateChange((authed) => {
+    firebase.auth().onAuthStateChanged((authed) => {
+      console.warn(authed.uid);
       if (authed) {
         const userInfo = {
-          uid: authed.userId,
+          uid: authed.uid,
           name: authed.displayName,
-          isAdmin: process.env.REACT_APP_ADMIN_UID === authed.uid,
         };
         setUser(userInfo);
+        if (userInfo.uid === firebaseConfig.adminUid) {
+          console.warn('Here we go');
+          setAdmin(userInfo);
+        }
       } else if (user || user === null) {
-        setUser(false);
+        setUser(null);
+        setAdmin(null);
       }
     });
-  });
+  }, []);
 
   return (
     <div>
       <Navigation />
-      <Routes />
+      <Routes admin={admin} />
       <BottomNavigation />
     </div>
   );
