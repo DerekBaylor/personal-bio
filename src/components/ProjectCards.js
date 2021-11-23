@@ -1,7 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { getProjects, deleteProject } from '../api/data/projectData';
 
-export default function ProjectCards({ card }) {
+export default function ProjectCards({ card, setCards }) {
+  const handleDelete = (method) => {
+    if (method === 'delete') {
+      deleteProject(card.firebaseKey).then(() => {
+        getProjects().then(setCards);
+      });
+    }
+  };
+
   return (
     <div>
       <div className="card project-card">
@@ -14,7 +24,7 @@ export default function ProjectCards({ card }) {
           <h3 className="card-title">{card.projectName}</h3>
           <h5 className="card-contributors">{card.contributors}</h5>
           <p className="card-text">{card.projectDescription}</p>
-          <div className="project-card-button-group">
+          <div className="project-card-link-group">
             <a
               href={card.deployedLink}
               target="_blank"
@@ -40,6 +50,24 @@ export default function ProjectCards({ card }) {
               Project Link
             </a>
           </div>
+          {/* Only Show if Admin */}
+          <div className="project-card-button-group">
+            <Link
+              to="/projectFromView"
+              className="btn btn-warning"
+              aria-current="page"
+              type="button"
+            >
+              Edit Project
+            </Link>
+            <button
+              onClick={() => handleDelete('Delete')}
+              className="btn btn-danger"
+              type="button"
+            >
+              Delete Project
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -48,4 +76,5 @@ export default function ProjectCards({ card }) {
 
 ProjectCards.propTypes = {
   card: PropTypes.shape(PropTypes.obj).isRequired,
+  setCards: PropTypes.func.isRequired,
 };

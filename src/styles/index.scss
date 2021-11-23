@@ -20,12 +20,16 @@ body {
           border-top-left-radius: 3rem;
           border-top-right-radius: 3rem;
       }
-      .project-card-button-group{
+      .project-card-link-group{
           display: flex;
           justify-content: center;
           .project-link-button{
               margin: .25rem;
           }
+      }
+      .project-card-button-group{
+        display: flex;
+        justify-content: center;
       }
   }
 }

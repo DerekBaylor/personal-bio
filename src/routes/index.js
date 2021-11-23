@@ -7,8 +7,6 @@ export default function Routes({ admin }) {
   console.warn('Routes Admin Check', admin);
   return (
     <>
-      {/* {admin.isAdmin && <AdminRoutes admin={admin} />} */}
-      {/* <AdminRoutes admin={admin} /> */}
       {admin ? <AdminRoutes admin={admin} /> : console.warn('Not and Admin')}
       <UserRoutes />
     </>
