@@ -2,11 +2,41 @@
     "p1": {
         "projectName": "React Horder",
         "projectImage": "https://zfjepfckphrvbatmvyud.supabase.in/storage/v1/object/public/personal-bio-storage/reactHorderLogo.png",
-        "projectDescription": "This is a web app where users can record and display their collections.",
+        "projectDescription": "The user definitely has a hoarding problem, and we're here to make it worse! With this app, the user can record all their stuff.",
         "teamProject": "true",
         "gitHubLink": "https://github.com/nss-evening-cohort-16/react-horder-ookie-spooky-devs",
         "projectLink": "https://github.com/nss-evening-cohort-16/react-horder-ookie-spooky-devs/projects/1",
         "deployedLink": "https://ookie-spooky-horder.netlify.app/",
-        "projectId": "proj-1-reactHorder"
+        "projectId": "proj-1-ReactHorder"
+    },
+    "p2": {
+        "projectName": "Hip Hop Pizza and Wangs",
+        "projectImage": "https://zfjepfckphrvbatmvyud.supabase.in/storage/v1/object/public/personal-bio-storage/Hip Hop Pizza and Wangs Logo Edited.png",
+        "projectDescription": "This app is for a Ma and Pa restaurant named Hip, Hop, Pizza, and Wangs. Their concept is a crossroads of music and food and since the 2020 pandemic they needed to change their business model to accommodate and influx of call in and online orders. That’s where this app comes in! It is a point of sale application that will help keep track of their orders.",
+        "teamProject": "true",
+        "gitHubLink": "https://github.com/nss-evening-cohort-16/hip-hop-pizza-and-wangs-java-souls",
+        "projectLink": "https://github.com/nss-evening-cohort-16/hip-hop-pizza-and-wangs-java-souls/projects",
+        "deployedLink": "/",
+        "projectId": "proj-2-HipHopPizzaAndWangs"
+    },
+    "p3": {
+        "projectName": "Team Roster",
+        "projectImage": "https://zfjepfckphrvbatmvyud.supabase.in/storage/v1/object/public/personal-bio-storage/Image Coming Soon.png",
+        "projectDescription": "This web app alows users to and edit a sports team. ",
+        "teamProject": "false",
+        "gitHubLink": "https://github.com/DerekBaylor/Team-Roster-react",
+        "projectLink": "https://github.com/DerekBaylor/Team-Roster-react/projects",
+        "deployedLink": "/",
+        "projectId": "proj-3-Team Roster"
+    },
+    "p4": {
+        "projectName": "Vocabulary",
+        "projectImage": "https://zfjepfckphrvbatmvyud.supabase.in/storage/v1/object/public/personal-bio-storage/Image Coming Soon.png",
+        "projectDescription": "This app alows a user to create personalized vocabulary cards that then are able to study and reference.",
+        "teamProject": "false",
+        "gitHubLink": "https://github.com/DerekBaylor/vocab-YOU-lary",
+        "projectLink": "https://github.com/DerekBaylor/vocab-YOU-lary/projects",
+        "deployedLink": "/",
+        "projectId": "proj-4-Vocabulary"
     }
 }
