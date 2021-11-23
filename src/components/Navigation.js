@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import personalLogo from '../assets/personalLogo.png';
 
-export default function Navigation() {
+export default function Navigation({ admin }) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light navbar-top">
       <div className="container-fluid">
         <div id="navbarNav">
           <ul className="navbar-nav">
@@ -36,18 +37,34 @@ export default function Navigation() {
                 Contact Me
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                className="nav-link active"
-                aria-current="page"
-                to="/projectForm"
-              >
-                Project Form
-              </Link>
-            </li>
+            {admin?.isAdmin ? (
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/projectForm"
+                >
+                  Project Form
+                </Link>
+              </li>
+            ) : (
+              <li className="nav-item hidden-link">
+                <Link className="nav-link active" aria-current="page" to="/">
+                  Hidden Link
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>
     </nav>
   );
 }
+
+Navigation.propTypes = {
+  admin: PropTypes.shape,
+};
+
+Navigation.defaultProps = {
+  admin: null,
+};

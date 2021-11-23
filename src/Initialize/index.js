@@ -23,6 +23,7 @@ function Initialize() {
           setAdmin(userInfo);
         }
       } else if (user || user === null) {
+        console.warn('Admin is Null');
         setUser(null);
         setAdmin(null);
       }
@@ -31,9 +32,9 @@ function Initialize() {
 
   return (
     <div>
-      <Navigation />
+      <Navigation admin={admin} />
       <Routes admin={admin} />
-      <BottomNavigation />
+      <BottomNavigation admin={admin} />
     </div>
   );
 }
