@@ -11,7 +11,8 @@ export default function ProjectCards({ card }) {
           alt="Logo of Project"
         />
         <div className="card-body">
-          <h5 className="card-title">{card.projectName}</h5>
+          <h3 className="card-title">{card.projectName}</h3>
+          <h5 className="card-contributors">{card.contributors}</h5>
           <p className="card-text">{card.projectDescription}</p>
           <div className="project-card-button-group">
             <a

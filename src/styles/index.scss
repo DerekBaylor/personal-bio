@@ -4,3 +4,55 @@
 body {
   background-color: $favColor !important;
 }
+
+.project-card-view{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: scroll;
+  .project-card{
+      max-width: 20rem;
+      border-radius: 3rem;
+      border-width: .15rem;
+      border-color: $LogoGray;
+      margin: .5rem;
+      .project-image{
+          border-top-left-radius: 3rem;
+          border-top-right-radius: 3rem;
+      }
+      .project-card-button-group{
+          display: flex;
+          justify-content: center;
+          .project-link-button{
+              margin: .25rem;
+          }
+      }
+  }
+}
+
+.btm-nav-bar{
+  overflow: hidden;
+  position: fixed;
+  .btm-nav-links-group{
+      display: flex;
+      flex-direction: row;
+      .btm-nav-link{
+          margin: .25rem;
+          font-size: .9rem;
+          color: $LogoGray;
+      }
+  }
+}
+
+.signIn-view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 30rem;
+  .signIn-view-logo{
+    margin: 1rem;
+  }
+  .sginIn-button{
+    max-width: 10em;
+  }
+}
