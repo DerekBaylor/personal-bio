@@ -16,7 +16,6 @@ export default function Authenticated({ user }) {
   );
 }
 
-// NOTE: The propTypes are set agains the component and the term is camelCased
 Authenticated.propTypes = {
   user: PropTypes.objectOf({
     fullName: PropTypes.string,

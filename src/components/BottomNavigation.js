@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { signOutUser } from '../api/auth';
 
-export default function BottomNavigation() {
+export default function BottomNavigation({ admin }) {
   return (
     <div>
       <nav className="navbar btm-nav-bar">
@@ -35,15 +37,27 @@ export default function BottomNavigation() {
                   Contact Me
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link btm-nav-link active"
-                  aria-current="page"
-                  to="/login"
-                >
-                  Admin
-                </Link>
-              </li>
+              {admin?.isAdmin ? (
+                <li className="nav-item">
+                  <Link
+                    className="nav-link btm-nav-link active"
+                    aria-current="page"
+                    to="/login"
+                  >
+                    Admin
+                  </Link>
+                </li>
+              ) : (
+                <li className="nav-item">
+                  <button
+                    onClick={signOutUser}
+                    type="button"
+                    className="btn btn-danger border border-dark"
+                  >
+                    Sign Out
+                  </button>
+                </li>
+              )}
             </ul>
           </div>
         </div>
@@ -51,3 +65,11 @@ export default function BottomNavigation() {
     </div>
   );
 }
+
+BottomNavigation.propTypes = {
+  admin: PropTypes.shape,
+};
+
+BottomNavigation.defaultProps = {
+  admin: null,
+};

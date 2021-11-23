@@ -30,6 +30,13 @@ body {
   }
 }
 
+.navbar-top{
+  vertical-align: middle;
+  .hidden-link{
+    display: none;
+  }
+}
+
 .btm-nav-bar{
   overflow: hidden;
   position: fixed;
