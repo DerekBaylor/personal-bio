@@ -11,7 +11,6 @@ function Initialize() {
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((authed) => {
-      console.warn(authed.uid);
       if (authed) {
         const userInfo = {
           uid: authed.uid,
@@ -19,11 +18,9 @@ function Initialize() {
         };
         setUser(userInfo);
         if (userInfo.uid === firebaseConfig.adminUid) {
-          console.warn('Here we go');
           setAdmin(userInfo);
         }
       } else if (user || user === null) {
-        console.warn('Admin is Null');
         setUser(null);
         setAdmin(null);
       }

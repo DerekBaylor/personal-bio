@@ -37,7 +37,17 @@ export default function BottomNavigation({ admin }) {
                   Contact Me
                 </Link>
               </li>
-              {admin?.isAdmin ? (
+              {admin ? (
+                <li className="nav-item">
+                  <button
+                    onClick={signOutUser}
+                    type="button"
+                    className="btn btn-light border border-dark"
+                  >
+                    Sign Out
+                  </button>
+                </li>
+              ) : (
                 <li className="nav-item">
                   <Link
                     className="nav-link btm-nav-link active"
@@ -46,16 +56,6 @@ export default function BottomNavigation({ admin }) {
                   >
                     Admin
                   </Link>
-                </li>
-              ) : (
-                <li className="nav-item">
-                  <button
-                    onClick={signOutUser}
-                    type="button"
-                    className="btn btn-danger border border-dark"
-                  >
-                    Sign Out
-                  </button>
                 </li>
               )}
             </ul>
@@ -67,7 +67,7 @@ export default function BottomNavigation({ admin }) {
 }
 
 BottomNavigation.propTypes = {
-  admin: PropTypes.shape,
+  admin: PropTypes.shape(PropTypes.obj),
 };
 
 BottomNavigation.defaultProps = {

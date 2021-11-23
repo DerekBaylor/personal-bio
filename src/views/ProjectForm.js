@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-export default function ProjectForm({ admin }) {
-  console.warn('Project Form Console Warn', admin);
-  return <h1>This is the ProjectForm</h1>;
+export default function ProjectForm() {
+  // console.warn(admin);
+  return <h1>This is the Project Form</h1>;
 }
 
-ProjectForm.propTypes = {
-  admin: PropTypes.shape.isRequired,
-};
+// ProjectForm.propTypes = {
+//   admin: PropTypes.shape.isRequired,
+// };

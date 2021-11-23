@@ -8,7 +8,7 @@ export default function Navigation({ admin }) {
     <nav className="navbar navbar-expand-lg navbar-light navbar-top">
       <div className="container-fluid">
         <div id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav navbar-top-links">
             <li className="nav-item">
               <Link className="navbar-brand" to="/">
                 <img src={personalLogo} alt="logo" style={{ width: '100px' }} />
@@ -37,7 +37,7 @@ export default function Navigation({ admin }) {
                 Contact Me
               </Link>
             </li>
-            {admin?.isAdmin ? (
+            {admin ? (
               <li className="nav-item">
                 <Link
                   className="nav-link active"
@@ -62,7 +62,7 @@ export default function Navigation({ admin }) {
 }
 
 Navigation.propTypes = {
-  admin: PropTypes.shape,
+  admin: PropTypes.shape(PropTypes.obj),
 };
 
 Navigation.defaultProps = {
