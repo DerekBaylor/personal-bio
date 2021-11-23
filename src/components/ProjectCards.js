@@ -8,6 +8,7 @@ export default function ProjectCards({ card, setCards }) {
     if (method === 'delete') {
       deleteProject(card.firebaseKey).then(() => {
         getProjects().then(setCards);
+        console.warn('Delete Click');
       });
     }
   };
@@ -61,11 +62,11 @@ export default function ProjectCards({ card, setCards }) {
               Edit Project
             </Link>
             <button
-              onClick={() => handleDelete('Delete')}
+              onClick={() => handleDelete('delete')}
               className="btn btn-danger"
               type="button"
             >
-              Delete Project
+              Delete
             </button>
           </div>
         </div>
