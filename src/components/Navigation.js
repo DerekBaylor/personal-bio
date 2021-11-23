@@ -42,7 +42,7 @@ export default function Navigation({ admin }) {
                 <Link
                   className="nav-link active"
                   aria-current="page"
-                  to="/projectForm"
+                  to="/projectFormView"
                 >
                   Project Form
                 </Link>

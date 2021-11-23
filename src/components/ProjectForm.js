@@ -1,0 +1,138 @@
+import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { createProject, updateProject } from '../api/data/projectData';
+
+const initialState = {
+  projectName: '',
+  projectImage: '',
+  contributors: '',
+  projectDescription: '',
+  deployedLink: '',
+  projectLink: '',
+  gitHubLink: '',
+};
+
+export default function ProjectForm({ obj }) {
+  const [formInput, setFormInput] = useState(initialState);
+  const history = useHistory();
+
+  useEffect(() => {
+    if (obj.firebaseKey) {
+      setFormInput(obj);
+    } else {
+      setFormInput(initialState);
+    }
+  }, [obj]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormInput((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const resetForm = () => {
+    setFormInput(initialState);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (obj.firebaseKey) {
+      updateProject(obj.firebaseKey, formInput).then(() => {
+        resetForm();
+        history.push('/projects');
+      });
+    } else {
+      createProject({ ...formInput }).then(() => {
+        resetForm();
+        history.push('/projects');
+      });
+    }
+  };
+
+  return (
+    <>
+      <div className="project-form-conatiner">
+        <h2>New Stuff</h2>
+        <div>
+          <h2 className="card-title">Add a new project</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="project-form-form">
+              <input
+                id="projectName"
+                name="projectName"
+                value={formInput.projectName}
+                onChange={handleChange}
+                required
+                placeholder="Project Name"
+              />
+              <input
+                id="projectImage"
+                name="projectImage"
+                value={formInput.projectImage}
+                onChange={handleChange}
+                required
+                placeholder="Project Image Link"
+              />
+              <input
+                id="contributors"
+                name="contributors"
+                value={formInput.contributors}
+                onChange={handleChange}
+                required
+                placeholder="Contributors"
+              />
+              <input
+                id="projectDescription"
+                name="projectDescription"
+                value={formInput.projectDescription}
+                onChange={handleChange}
+                required
+                placeholder="Project Description"
+              />
+              <input
+                id="deployedLink"
+                name="deployedLink"
+                value={formInput.deployedLink}
+                onChange={handleChange}
+                required
+                placeholder="Link to Deployed Site"
+              />
+              <input
+                id="projectLink"
+                name="projectLink"
+                value={formInput.projectLink}
+                onChange={handleChange}
+                required
+                placeholder="Link to Site Projects"
+              />
+              <input
+                id="gitHubLink"
+                name="gitHubLink"
+                value={formInput.gitHubLink}
+                onChange={handleChange}
+                required
+                placeholder="Link to Github Repo"
+              />
+            </div>
+            <button type="submit" className="btn btn-info">
+              {obj.firebaseKey ? 'Edit' : 'Create'}
+            </button>
+          </form>
+        </div>
+      </div>
+    </>
+  );
+}
+
+ProjectForm.propTypes = {
+  obj: PropTypes.shape(PropTypes.obj),
+};
+
+ProjectForm.defaultProps = {
+  obj: {},
+};

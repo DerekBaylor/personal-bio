@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import getProjects from '../api/data/projectData';
+import { getProjects } from '../api/data/projectData';
 import ProjectCards from '../components/ProjectCards';
 
 export default function Projects() {
@@ -15,9 +15,9 @@ export default function Projects() {
       <div className="project-card-view">
         {projCards.map((card) => (
           <ProjectCards
-            key={card.projectId}
+            key={card.firebaseKey}
             card={card}
-            setCard={setProjCards}
+            setCards={setProjCards}
           />
         ))}
       </div>
