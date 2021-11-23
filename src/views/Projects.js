@@ -9,8 +9,6 @@ export default function Projects() {
     getProjects().then(setProjCards);
   }, []);
 
-  getProjects().then('Project Page Console Warn', console.warn);
-  console.warn('Project Cards', ProjectCards);
   return (
     <div className="project-view">
       <h1>These are my Projects</h1>
