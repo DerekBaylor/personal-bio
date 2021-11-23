@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import PropTypes from 'prop-types';
 import getProjects from '../api/data/projectData';
 import ProjectCards from '../components/ProjectCards';
 
@@ -10,12 +9,10 @@ export default function Projects() {
     getProjects().then(setProjCards);
   }, []);
 
-  getProjects().then('Project Page Console Warn', console.warn);
-  console.warn('Project Cards', ProjectCards);
   return (
-    <div>
+    <div className="project-view">
       <h1>These are my Projects</h1>
-      <div className="d-flex flex-wrap">
+      <div className="project-card-view">
         {projCards.map((card) => (
           <ProjectCards
             key={card.projectId}
@@ -27,7 +24,3 @@ export default function Projects() {
     </div>
   );
 }
-
-// Projects.propTypes = {
-//   projectId: PropTypes.string.isRequired,
-// };
