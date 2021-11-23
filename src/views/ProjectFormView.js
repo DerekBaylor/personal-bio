@@ -1,9 +1,15 @@
 import React from 'react';
+import ProjectForm from '../components/ProjectForm';
 // import PropTypes from 'prop-types';
 
 export default function ProjectFormView() {
   // console.warn(admin);
-  return <h1>This is the Project Form</h1>;
+  return (
+    <div>
+      <h1>Add and Edit Projects</h1>
+      <ProjectForm />
+    </div>
+  );
 }
 
 // ProjectForm.propTypes = {

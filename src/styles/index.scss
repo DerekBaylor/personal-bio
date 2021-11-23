@@ -80,3 +80,13 @@ body {
       width: 10em;
     }
 }
+
+.project-form-container{
+  .project-form-form{
+    display: flex;
+    flex-direction: column;
+    .form-input{
+      margin-left: 10rem;
+    }
+  }
+}
