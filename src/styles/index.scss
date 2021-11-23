@@ -31,22 +31,30 @@ body {
 }
 
 .navbar-top{
-  vertical-align: middle;
-  .hidden-link{
-    display: none;
+  .navbar-top-links{
+    display: flex;
+    align-items: center;
+    .hidden-link{
+      display: none;
+    }
   }
 }
 
 .btm-nav-bar{
+  max-width: 19rem;
+  margin-top: 10rem;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
   position: fixed;
   .btm-nav-links-group{
       display: flex;
       flex-direction: row;
+      align-items: center;
       .btm-nav-link{
-          margin: .25rem;
-          font-size: .9rem;
-          color: $LogoGray;
+        margin: .25rem;
+        font-size: .9rem;
+        color: $LogoGray;
       }
   }
 }
@@ -54,12 +62,17 @@ body {
 .signIn-view{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  max-width: 30rem;
-  .signIn-view-logo{
-    margin: 1rem;
+  align-items: center;
+  .signIn-h1{
+    color: $LogoBlue;
   }
-  .sginIn-button{
-    max-width: 10em;
-  }
+    .signIn-view-logo{
+      max-width: 25rem;
+      margin: 1rem;
+    }
+    .signIn-button{
+      display: flex;
+      justify-content: center;
+      width: 10em;
+    }
 }

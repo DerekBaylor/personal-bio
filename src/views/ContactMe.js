@@ -15,7 +15,7 @@ export default function ContactMe() {
       <div className="contact-info-card-view">
         {contactInfo.map((card) => (
           <ContactInfoCard
-            key={card.userId}
+            key={card.uid}
             card={card}
             setCard={setContactInfo}
           />
