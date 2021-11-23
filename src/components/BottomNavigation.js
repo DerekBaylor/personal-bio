@@ -35,6 +35,15 @@ export default function BottomNavigation() {
                   Contact Me
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link btm-nav-link active"
+                  aria-current="page"
+                  to="/login"
+                >
+                  Admin
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
