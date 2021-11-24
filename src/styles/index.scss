@@ -30,6 +30,12 @@ body {
       .project-card-button-group{
         display: flex;
         justify-content: center;
+        .card-btn{
+          margin: .25rem;
+        }
+      }
+      .project-card-hidden-text{
+        display: none;
       }
   }
 }

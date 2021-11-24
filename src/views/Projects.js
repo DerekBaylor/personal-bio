@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { getProjects } from '../api/data/projectData';
 import ProjectCards from '../components/ProjectCards';
 
-export default function Projects() {
+export default function Projects({ admin }) {
   const [projCards, setProjCards] = useState([]);
 
   useEffect(() => {
@@ -18,9 +19,18 @@ export default function Projects() {
             key={card.firebaseKey}
             card={card}
             setCards={setProjCards}
+            admin={admin}
           />
         ))}
       </div>
     </div>
   );
 }
+
+Projects.propTypes = {
+  admin: PropTypes.shape(PropTypes.obj),
+};
+
+Projects.defaultProps = {
+  admin: null,
+};

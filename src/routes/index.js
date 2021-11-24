@@ -4,15 +4,14 @@ import AdminRoutes from './AdminRoutes';
 import UserRoutes from './UserRoutes';
 
 export default function Routes({ admin }) {
-  console.warn('Routes Admin Check', admin);
   return (
     <>
-      {admin ? <AdminRoutes admin={admin} /> : console.warn('Not and Admin')}
-      <UserRoutes />
+      {admin ? <AdminRoutes admin={admin} /> : ''}
+      <UserRoutes admin={admin} />
     </>
   );
 }
-
+// console.warn('Is not an Admin')
 Routes.propTypes = {
   admin: PropTypes.shape(PropTypes.obj),
 };

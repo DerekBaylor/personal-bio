@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { getProjects, deleteProject } from '../api/data/projectData';
 
-export default function ProjectCards({ card, setCards }) {
+export default function ProjectCards({ admin, card, setCards }) {
   const handleDelete = (method) => {
     if (method === 'delete') {
       deleteProject(card.firebaseKey).then(() => {
         getProjects().then(setCards);
-        console.warn('Delete Click');
       });
     }
   };
@@ -51,24 +50,29 @@ export default function ProjectCards({ card, setCards }) {
               Project Link
             </a>
           </div>
-          {/* Only Show if Admin */}
-          <div className="project-card-button-group">
-            <Link
-              to="/projectFromView"
-              className="btn btn-warning"
-              aria-current="page"
-              type="button"
-            >
-              Edit Project
-            </Link>
-            <button
-              onClick={() => handleDelete('delete')}
-              className="btn btn-danger"
-              type="button"
-            >
-              Delete
-            </button>
-          </div>
+          {admin ? (
+            <div className="project-card-button-group">
+              <Link
+                to={`/editProjectView/${card.firebaseKey}`}
+                className="btn btn-warning card-btn"
+                aria-current="page"
+                type="button"
+              >
+                Edit Project
+              </Link>
+              <button
+                onClick={() => handleDelete('delete')}
+                className="btn btn-danger card-btn"
+                type="button"
+              >
+                Delete
+              </button>
+            </div>
+          ) : (
+            <div className="project-card-hidden-text">
+              <h1>Hidden Text</h1>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -76,6 +80,11 @@ export default function ProjectCards({ card, setCards }) {
 }
 
 ProjectCards.propTypes = {
+  admin: PropTypes.shape(PropTypes.obj),
   card: PropTypes.shape(PropTypes.obj).isRequired,
   setCards: PropTypes.func.isRequired,
+};
+
+ProjectCards.defaultProps = {
+  admin: null,
 };

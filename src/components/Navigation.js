@@ -10,7 +10,7 @@ export default function Navigation({ admin }) {
         <div id="navbarNav">
           <ul className="navbar-nav navbar-top-links">
             <li className="nav-item">
-              <Link className="navbar-brand" to="/">
+              <Link className="navbar-brand navbar-logo" to="/">
                 <img src={personalLogo} alt="logo" style={{ width: '100px' }} />
               </Link>
             </li>
@@ -42,7 +42,7 @@ export default function Navigation({ admin }) {
                 <Link
                   className="nav-link active"
                   aria-current="page"
-                  to="/projectFormView"
+                  to="/newProjectView"
                 >
                   Project Form
                 </Link>

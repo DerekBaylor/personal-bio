@@ -5,7 +5,6 @@ const baseURL = firebaseConfig.databaseURL;
 
 const getProjects = () => new Promise((resolve, reject) => {
   axios
-  // .get(`${baseURL}/projects.json?orderBy="firebaseKey"&equalTo="${firebaseKey}"`)
     .get(`${baseURL}/projects.json`)
     .then((response) => resolve(Object.values(response.data)))
     .catch(reject);
