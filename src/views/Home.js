@@ -16,7 +16,6 @@ export default function Home({ admin }) {
   return (
     <div className="home-view">
       <h1 className="title-text">Welcome to my Site</h1>
-      {/* <TechLogoForm /> */}
       <img
         className="img img-head-shot"
         src={headShot}
@@ -34,6 +33,7 @@ export default function Home({ admin }) {
           />
         ))}
       </div>
+      {/* <TechLogoForm /> */}
     </div>
   );
 }
