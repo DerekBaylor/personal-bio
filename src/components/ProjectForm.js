@@ -75,7 +75,7 @@ export default function ProjectForm({ obj }) {
             </div>
             <div className="form-group">
               <label className="form-label">
-                Project Name:
+                Project Image:
                 <input
                   className="form-input"
                   id="projectImage"
@@ -157,8 +157,8 @@ export default function ProjectForm({ obj }) {
                 />
               </label>
             </div>
-            <button type="submit" className="btn btn-info">
-              {obj.firebaseKey ? 'Edit' : 'Create'}
+            <button type="submit" className="btn btn-info form-btn">
+              {obj.firebaseKey ? 'Submit Changes' : 'Add Project'}
             </button>
           </form>
         </div>

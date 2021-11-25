@@ -12,8 +12,8 @@ export default function EditProjectView() {
   }, []);
 
   return (
-    <div>
-      <h1>Edit Project</h1>
+    <div className="edit-project-view-container">
+      <h1 className="title-text">Edit Project</h1>
       <ProjectForm obj={editProject} />
     </div>
   );
