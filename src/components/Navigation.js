@@ -52,7 +52,7 @@ export default function Navigation({ admin }) {
                   <Link
                     className="nav-link active"
                     aria-current="page"
-                    to="/NewTechLogoView"
+                    to="/newTechLogoView"
                   >
                     Tech Logo Form
                   </Link>

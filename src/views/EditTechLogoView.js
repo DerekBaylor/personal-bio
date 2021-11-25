@@ -13,7 +13,7 @@ export default function EditTechLogoView() {
 
   return (
     <div className="edit-project-view-container">
-      <h1 className="title-text">Edit Project</h1>
+      <h1 className="title-text">Edit Logo</h1>
       <TechLogoForm obj={editLogo} />
     </div>
   );
