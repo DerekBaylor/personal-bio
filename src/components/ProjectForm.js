@@ -24,7 +24,7 @@ export default function ProjectForm({ obj }) {
       setFormInput(initialState);
     }
   }, [obj]);
-  console.warn(obj.firebaseKey);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 

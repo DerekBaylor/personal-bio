@@ -4,6 +4,7 @@ import { getTechLogos } from '../api/data/techLogoData';
 import headShot from '../assets/headShot.png';
 import PersonalBio from '../components/PersonalBio';
 import TechnologyCards from '../components/TechnologyCards';
+// import TechLogoForm from '../components/TechLogoForm';
 
 export default function Home({ admin }) {
   const [techLogoCards, setTechLogoCards] = useState([]);
@@ -15,6 +16,7 @@ export default function Home({ admin }) {
   return (
     <div className="home-view">
       <h1 className="title-text">Welcome to my Site</h1>
+      {/* <TechLogoForm /> */}
       <img
         className="img img-head-shot"
         src={headShot}

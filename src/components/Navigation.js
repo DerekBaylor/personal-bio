@@ -38,15 +38,26 @@ export default function Navigation({ admin }) {
               </Link>
             </li>
             {admin ? (
-              <li className="nav-item">
-                <Link
-                  className="nav-link active"
-                  aria-current="page"
-                  to="/newProjectView"
-                >
-                  Project Form
-                </Link>
-              </li>
+              <div className="nav-bar-admin-links">
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/newProjectView"
+                  >
+                    Project Form
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/NewTechLogoView"
+                  >
+                    Tech Logo Form
+                  </Link>
+                </li>
+              </div>
             ) : (
               <li className="nav-item hidden-link">
                 <Link className="nav-link active" aria-current="page" to="/">
