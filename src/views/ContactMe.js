@@ -10,8 +10,8 @@ export default function ContactMe() {
   }, []);
 
   return (
-    <div className="contact-info-view">
-      <h1>This is how you contact me.</h1>
+    <div className="contact-info-view-container">
+      <h1 className="title-text">This is how you contact me.</h1>
       <div className="contact-info-card-view">
         {contactInfo.map((card) => (
           <ContactInfoCard

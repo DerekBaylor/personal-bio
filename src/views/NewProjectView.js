@@ -3,8 +3,8 @@ import ProjectForm from '../components/ProjectForm';
 
 export default function NewProjectView() {
   return (
-    <div>
-      <h1>Add and Edit Projects</h1>
+    <div className="new-project-view-container">
+      <h1 className="title-text">Add a Project</h1>
       <ProjectForm />
     </div>
   );

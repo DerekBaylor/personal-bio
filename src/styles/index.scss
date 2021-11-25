@@ -5,6 +5,13 @@ body {
   background-color: $favColor !important;
 }
 
+.project-view-container{
+  .title-text{
+    text-align: center;
+    color: $LogoBlue;
+  }
+}
+
 .project-card-view{
   display: flex;
   flex-wrap: wrap;
@@ -38,6 +45,18 @@ body {
         display: none;
       }
   }
+}
+
+.contact-info-view-container{
+  .title-text{
+    text-align: center;
+    color: $LogoBlue;
+  }
+}
+
+.contact-info-card{
+  display: flex;
+  max-width: 20rem;
 }
 
 .navbar-top{
@@ -87,12 +106,32 @@ body {
     }
 }
 
-.project-form-container{
+.new-project-view-container{
+  text-align: center;
+  .title-text{
+    color: $LogoBlue;
+  }
+}
+.edit-project-view-container{
+  text-align: center;
+  .title-text{
+    color: $LogoBlue;
+  }
+}
+
+.project-form-conatiner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .project-form-form{
-    display: flex;
-    flex-direction: column;
+    border: $LogoBlue solid .1rem;
+    max-width: 30rem;
+    padding: 1rem;
     .form-input{
-      margin-left: 10rem;
+      margin-left: 5rem;
+    }
+    .form-btn{
+      max-width: 7rem;
     }
   }
 }
