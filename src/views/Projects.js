@@ -12,7 +12,7 @@ export default function Projects({ admin }) {
 
   return (
     <div className="project-view-container">
-      <h1 className="title-text">These are my Projects</h1>
+      <h1 className="title-text">These are a few of my Projects</h1>
       <div className="project-card-view">
         {projCards.map((card) => (
           <ProjectCards

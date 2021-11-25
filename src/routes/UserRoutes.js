@@ -10,7 +10,7 @@ export default function UserRoutes({ admin }) {
   return (
     <>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={() => <Home admin={admin} />} />
         <Route
           exact
           path="/projects"
