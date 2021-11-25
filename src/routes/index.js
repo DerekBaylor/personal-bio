@@ -11,7 +11,7 @@ export default function Routes({ admin }) {
     </>
   );
 }
-// console.warn('Is not an Admin')
+
 Routes.propTypes = {
   admin: PropTypes.shape(PropTypes.obj),
 };

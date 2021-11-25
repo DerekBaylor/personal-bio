@@ -7,13 +7,18 @@ export default function ContactInfoCard({ card }) {
       <div className="card contact-info-card">
         <div className="card-body">
           <h1 className="card-title">{card.name}</h1>
-          <p className="card-text">Some quick example text.</p>
+          <p className="card-text">
+            Please reach out to me on linkedIn if you have any questions.
+          </p>
         </div>
         <div className="card-body">
-          <a href="/" className="card-link">
+          <a
+            href="https://www.linkedin.com/in/derek-baylor/"
+            className="card-link"
+          >
             LinkedIn
           </a>
-          <a href="/" className="card-link">
+          <a href="https://github.com/DerekBaylor" className="card-link">
             Git Hub
           </a>
         </div>

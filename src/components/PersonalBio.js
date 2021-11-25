@@ -2,15 +2,19 @@ import React from 'react';
 
 export default function PersonalBio() {
   return (
-    <div>
-      <p>
+    <div className="bio-text-container">
+      <h3 className="bio-text-title">A little about me.</h3>
+      <p className="bio-text-body">
         My journey into tech started back in the early 90s when my father
         introduced me to Commander Keen on a 5.25in floppy disk, but as I have
         gotten older, I have found other uses for computers than just video
-        games. My first jump into technology was when I built a database in
-        Microsoft Access to track the maintenance performed on rental equipment
-        when I worked for an event company. At the beginning of 2021, I decided
-        to pursue a full-time career in web development and submitted my
+        games.
+      </p>
+      <p className="bio-text-body">
+        My first jump into technology was when I built a database in Microsoft
+        Access to track the maintenance performed on rental equipment when I
+        worked for an event company. At the beginning of 2021, I decided to
+        pursue a full-time career in web development and submitted my
         application to Nashville Software School, and started my yearlong boot
         camp in July.
       </p>
