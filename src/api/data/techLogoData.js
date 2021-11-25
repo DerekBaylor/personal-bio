@@ -5,7 +5,7 @@ const baseURL = firebaseConfig.databaseURL;
 
 const getTechLogos = () => new Promise((resolve, reject) => {
   axios
-    .get(`${baseURL}/technologyTable.json`)
+    .get(`https://derek-baylor.netlify.app/${baseURL}/technologyTable.json`)
     .then((response) => resolve(Object.values(response.data)))
     .catch(reject);
 });
