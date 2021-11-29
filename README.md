@@ -1,5 +1,6 @@
- ## Bio Site
+ ## Personal Bio Site
 
+https://derek-baylor.netlify.app/
 
 ## Requirements
 <!-- - You should go through AT LEAST 4 projects (individual or group) and deployed them. -->
