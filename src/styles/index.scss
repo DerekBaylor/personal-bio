@@ -159,9 +159,14 @@ body {
 
 .tech-cards-view{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   .tech-logo-card{
     max-width: 5rem;
-    margin: .5rem;
+    margin: .9rem;
+    text-align: center;
+    background-color: $favColor;
+    border: none;
     .project-card-hidden-text{
       display: none;
     }

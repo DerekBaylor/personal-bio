@@ -6,11 +6,11 @@ import NewProjectView from '../views/NewProjectView';
 import NewTechLogoView from '../views/NewTechLogoView';
 
 export default function AdminRoutes() {
-  console.warn(Route);
   return (
     <Switch>
       <Route exact path="/newProjectView" component={NewProjectView} />
       <Route exact path="/editProjectView/:key" component={EditProjectView} />
+
       <Route exact path="/newTechLogoView" componet={NewTechLogoView} />
       <Route exact path="/editTechLogoView/:key" component={EditTechLogoView} />
     </Switch>
