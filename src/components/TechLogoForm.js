@@ -12,8 +12,6 @@ export default function TechLogoForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
   const history = useHistory();
 
-  console.warn('Tech Logo Form');
-
   useEffect(() => {
     if (obj.firebaseKey) {
       setFormInput(obj);

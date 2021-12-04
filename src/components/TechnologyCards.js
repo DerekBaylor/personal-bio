@@ -21,6 +21,7 @@ export default function TechnologyCards({ admin, card, setCards }) {
             src={card.techLogoLink}
             alt="Logo of technology"
           />
+          <p className="card-title">{card.name}</p>
         </div>
         {admin ? (
           <div className="tech-logo-btn-group">
