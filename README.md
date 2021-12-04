@@ -1,4 +1,4 @@
- ## Personal Bio Site
+ ## Personal Bio Site[![Netlify Status](https://api.netlify.com/api/v1/badges/be56c4a1-574b-4ba7-a3cf-d01fd50649ab/deploy-status)](https://https://app.netlify.com/sites/derek-baylor/settings/deploys)
 
 <img width="1000" alt="Home Screen" src="https://zfjepfckphrvbatmvyud.supabase.in/storage/v1/object/public/personal-bio-storage/homepage-bio-site.PNG">
 
