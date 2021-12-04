@@ -1,4 +1,4 @@
- ## Personal Bio Site[![Netlify Status](https://api.netlify.com/api/v1/badges/23892ce3-272f-4649-8a4f-330445cd8820/deploy-status)](https://app.netlify.com/sites/amazing-wright-8eac2c/deploys)
+ ## Personal Bio Site
 
 <img width="1000" alt="Home Screen" src="https://zfjepfckphrvbatmvyud.supabase.in/storage/v1/object/public/personal-bio-storage/homepage-bio-site.PNG">
 
