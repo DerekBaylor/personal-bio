@@ -5,18 +5,16 @@ export default function PersonalBio() {
     <div className="bio-text-container">
       <h3 className="bio-text-title">A little about me.</h3>
       <p className="bio-text-body">
-        My journey into tech started back in the early 90s when my father
-        introduced me to Commander Keen on a 5.25in floppy disk, but as I have
-        gotten older, I have found other uses for computers than just video
-        games.
+        I like flannel shirts and building things. I like team environments and project management. Most of all, I like learning.
       </p>
       <p className="bio-text-body">
-        My first jump into technology was when I built a database in Microsoft
-        Access to track the maintenance performed on rental equipment when I
-        worked for an event company. At the beginning of 2021, I decided to
-        pursue a full-time career in web development and submitted my
-        application to Nashville Software School, and started my yearlong boot
-        camp in July.
+        My road into technology started when I built a Microsoft Access database to help me track the repairs and maintenance performed on an array of equipment that was rented out on a weekly basis. Over the course of several weeks, I learned the basics of Access and built an application that met the needs of the company’s maintenance shop and made my life easier.
+      </p>
+          <p className="bio-text-body">
+        Since then, I’ve started to embrace technology as much as possible in my day-to-day work life and over the years it has grown into a passion for helping create tools that not only help me but also the teams I am a part of work more efficiently.
+      </p>
+          <p className="bio-text-body">
+        It was this passion that drove me into signing up for the NSS boot camp with the goal of pursuing a career as a developer. 
       </p>
     </div>
   );
