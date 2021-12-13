@@ -27,6 +27,9 @@ body {
           border-top-left-radius: 3rem;
           border-top-right-radius: 3rem;
       }
+      .card-title{
+        color: $LogoBlue;
+      }
       .project-card-link-group{
           display: flex;
           justify-content: center;
@@ -139,20 +142,29 @@ body {
   }
 }
 
-.home-view{
+.home-view {
   display: flex;
   flex-direction: column;
   align-items: center;
-  .title-text{
+  .title-text {
     text-align: center;
     color: $LogoBlue;
   }
-  .bio-text-container{
-    .bio-text-title{
+  .img-head-shot {
+    border-radius: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 30rem;
+  }
+  .bio-text-container {
+    .bio-text-title {
+      color: $LogoBlue;
       text-align: center;
     }
-    .bio-text-body{
-      max-width: 25rem;
+    .bio-text-body {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      max-width: 40rem;
     }
   }
 }

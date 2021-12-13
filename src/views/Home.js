@@ -20,7 +20,7 @@ export default function Home({ admin }) {
         className="img img-head-shot"
         src={headShot}
         alt="headShot"
-        style={{ width: '300px' }}
+        // style={{ width: '300px' }}
       />
       <PersonalBio />
       <div className="tech-cards-view">
