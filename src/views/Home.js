@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { getTechLogos } from '../api/data/techLogoData';
-import headShot from '../assets/headShot.png';
 import PersonalBio from '../components/PersonalBio';
 import TechnologyCards from '../components/TechnologyCards';
 // import TechLogoForm from '../components/TechLogoForm';
@@ -18,9 +17,8 @@ export default function Home({ admin }) {
       <h1 className="title-text">Welcome to my Site</h1>
       <img
         className="img img-head-shot"
-        src={headShot}
+        src="https://zfjepfckphrvbatmvyud.supabase.in/storage/v1/object/public/personal-bio-storage/headshot.png"
         alt="headShot"
-        // style={{ width: '300px' }}
       />
       <PersonalBio />
       <div className="tech-cards-view">

@@ -58,11 +58,16 @@ body {
     text-align: center;
     color: $LogoBlue;
   }
-}
-
-.contact-info-card{
-  display: flex;
-  max-width: 20rem;
+  .contact-info-card{
+    display: flex;
+    text-align: center;
+    max-width: fit-content;
+    .card-body{
+      .img-head-shot{
+        max-width: 25rem;
+      }
+    }
+  }
 }
 
 .navbar-top{
