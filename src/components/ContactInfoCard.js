@@ -7,9 +7,12 @@ export default function ContactInfoCard({ card }) {
       <div className="card contact-info-card">
         <div className="card-body">
           <h1 className="card-title">{card.name}</h1>
-          <p className="card-text">
-            Please reach out to me on linkedIn if you have any questions.
-          </p>
+          <img
+            className="img img-head-shot"
+            src={card.headShot}
+            alt="headShot"
+          />
+          <p className="card-text">Please reach out to me on linkedIn.</p>
         </div>
         <div className="card-body">
           <a
