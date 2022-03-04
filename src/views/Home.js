@@ -17,7 +17,7 @@ export default function Home({ admin }) {
       <h1 className="title-text">Welcome to my Site</h1>
       <img
         className="img img-head-shot"
-        // src="https://zfjepfckphrvbatmvyud.supabase.in/storage/v1/object/public/personal-bio-storage/headshot.png"
+        src="https://zfjepfckphrvbatmvyud.supabase.in/storage/v1/object/public/personal-bio-storage/headshot.jpg"
         alt="headShot"
       />
       <PersonalBio />
