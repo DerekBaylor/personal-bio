@@ -15,11 +15,11 @@ export default function Home({ admin }) {
   return (
     <div className="home-view">
       <h1 className="title-text">Welcome to my Site</h1>
-      <img
+      {/* <img
         className="img img-head-shot"
         src="https://zfjepfckphrvbatmvyud.supabase.in/storage/v1/object/public/personal-bio-storage/headshot.png"
         alt="headShot"
-      />
+      /> */}
       <PersonalBio />
       <div className="tech-cards-view">
         {techLogoCards.map((card) => (
